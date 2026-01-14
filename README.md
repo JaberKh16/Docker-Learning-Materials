@@ -38,11 +38,11 @@ Docker Different Concepts
     3. Ephemeral by design (data is lost unless stored in volumes).
 
     Common commands:
-    
-    $ docker run -it ubuntu bash
-    $ docker ps
-    $ docker stop <id>
-    $ docker rm <id>
+    ```
+        $ docker run -it ubuntu bash
+        $ docker ps
+        $ docker stop <id>
+        $ docker rm <id>
 
 ### 4. Dockerfile
 
@@ -88,7 +88,7 @@ Docker Different Concepts
     Google Artifact Registry
 
     Commands:
-    
+    ```
         $ docker login
         $ docker push username/app
         $ docker pull username/app
@@ -99,14 +99,14 @@ Docker Different Concepts
 
     Use cases:
 
-    Databases
+    - Databases
 
-    Logs
+    - Logs
 
-    Shared state
+    - Shared state
 
     Commands:
-    
+    ```
         $ docker volume create data
         $ docker run -v data:/var/lib/mysql mysql
         $ docker volume ls
@@ -126,7 +126,7 @@ Docker Different Concepts
     - overlay (for Swarm)
 
     Commands:
-    
+    ```
         $ docker network ls
         $ docker network create mynetwork
         $ docker run --network=mynetwork app
@@ -153,7 +153,7 @@ Docker Different Concepts
 
 
     Commands:
-    
+    ```
         $ docker compose up
         $ docker compose down
 
@@ -200,7 +200,7 @@ Docker Different Concepts
     - Rolling updates
 
         Commands:
-            
+        ```    
             $ docker swarm init
             $ docker service create --replicas 3 nginx
 
@@ -230,4 +230,4 @@ Docker Different Concepts
 
     2. Use multi-stage builds.
 
-Tag images properly.
+    3. Tag images properly.
